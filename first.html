@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>first</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <button class="arguingButton" onclick="argueA()" type="button" name="button"></button>
+    <div id="a"></div>
+    <br>
+    <button class="arguingButton" onclick="argueB()" type="button" name="button"></button>
+    <div id="b"></div>
+    <script type="text/javascript">
+    function argueA(){
+        var elemA = document.getElementById("a");
+        var elemB = document.getElementById("b");
+        if(elemB.innerText == "No, I'm right"){
+          elemA.innerText = "I'm right";
+          elemB.innerText = "";
+        }else{
+          elemA.innerText = "I'm right";
+        }
+      }
+      function argueB(){
+        var elemA = document.getElementById("a");
+        var elemB = document.getElementById("b");
+        if(elemA.innerText == "I'm right"){
+          elemB.innerText = "No, I'm right";
+          elemA.innerText = "";
+        }else{
+          elemB.innerText = "I'm right"
+        }
+      }
+    </script>
+  </body>
+</html>
