@@ -33,5 +33,39 @@
         }
       }
     </script>
+
+    <h1 id="div1"> Don"t hover over me like that</h1>
+
+
+    <script>
+      let test =document.getElementById("div1");
+      test.addEventListener("mouseover", (event) =>  alert ("I told you not to hover over me"));
+    </script>
+    <h1 id = "message">Currently waiting name, email, and password</h1>
+
+    <div>
+        <label>Name:</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="text" id="email" name="email">
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" id="pass" name="password">
+    </div>
+    <input type = "button" value="Submit" onclick="buttonClick()"/>
+    <script>function buttonClick(){
+    let user = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let pass = document.getElementById("pass").value;
+    if(pass == "12345678"){
+        document.getElementById("message").innerText="The user " + user + " with email " + email + " is on.";
+    } else {
+        alert("The password is incorrect");
+    }
+  }
+  </script>
   </body>
 </html>
